@@ -1,0 +1,401 @@
+@import 'src/assets/mixins';
+
+.image{
+    width: 100%;
+    height: 625px;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/images%2FLoseIt-com_HEADER-1_1280x623.jpg?alt=media&token=901216af-a10d-4e8b-a5de-973a3567350d');
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 100px;
+background-position: center;
+}
+button{
+    @include button;
+    width: 300px;
+    height: 60px;
+    font-weight: bold;
+    font-family: 'avenir';
+    letter-spacing: 2px;
+}
+
+.colBg{
+    width: 100vw;
+    @include position(flex,center,center);
+    padding: 100px;
+    flex-direction: column;
+}
+.col{
+    width: 600px;
+    height: 4900px;
+    @include position(flex,center,center);
+    flex-direction: column;
+    @media screen and (max-width:414px){
+        height: 4500px;
+        }
+}
+h2{
+    color: #818386;
+    font-size: 48px;
+    text-align: center;
+    font-family: "raleway", sans-serif;
+    font-weight: lighter;
+    padding-bottom: 70px;
+    @media screen and (max-width:414px){
+       font-size: 30px;
+       }
+}
+.numbers{
+    width: 100%;
+    @include position(flex,center,center);
+    flex-direction: column;
+}
+.box{
+    width: 500px;
+    height: 150px;
+    border: 10px solid rgb(212, 212, 212);
+    margin-bottom: 30px;
+    font-size: 85px;
+    color: rgb(233, 126, 20);
+    @include position(flex,center,center);
+    @media screen and (max-width:414px){
+        width: 386px;
+        font-size: 50px;
+        }
+    @media screen and (max-width:376px){
+        font-size: 40px;
+        width: 300px;
+        height: 100px;
+        }   
+}
+.pounds{
+    width: 540px;
+    text-align: center;
+    display: block;
+    color: #ed8623;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .05em;
+    font-family: 'avenir', Helvetica, sans-serif;
+    margin-bottom: 200px;
+    @media screen and (max-width:414px){
+        margin-bottom: 100px;
+        }
+        @media screen and (max-width:360px){
+            font-size: 18px;
+                 }
+ 
+}
+.orBlock{
+    width: 70px;
+    height: 10px;
+    background-color: #ed8623;
+    margin: 50px;
+}
+.howItWorks{
+@include position(flex,center,center);
+flex-direction: column;
+
+}
+.bigPhone{
+    @media screen and (max-width:360px){
+        width: 300px;
+}
+}
+.howWorks{
+    width: 800px;
+    height: 800px;
+    display: flex;
+    margin-bottom: 200px;
+    @media screen and (max-width:932px){
+        height: 1700px;
+       flex-direction: column;
+       align-items: center;
+       justify-content: space-between;
+       margin-bottom: 100px;
+        }
+        @media screen and (max-width:360px){
+            width: 300px;
+    }
+}
+.points{
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (max-width:414px){
+        height: 800px;
+          }
+              @media screen and (max-width:360px){
+            width: 300px;
+    }
+}
+.point{
+    width: 400px;
+    height: 175px;
+    text-align: center;
+    padding: 0 60px 0 30px;
+    @media screen and (max-width:932px){
+      margin-bottom: 20px;
+      padding: 30px;
+        }
+        @media screen and (max-width:376px){
+            width: 350px;
+            }  
+     
+}
+h3{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    color: #818386;
+    text-align: center;
+    line-height: 1.6em;
+}
+.point p{
+    font-size: 18px;
+    color: #888888;
+    text-align: center;
+    @media screen and (max-width:376px){
+    width: 300px;
+ 
+        }  
+}
+.ways{
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #818386;
+    font-weight: bold;
+    letter-spacing: .2em;
+    margin-bottom: 60px;
+}
+
+.foodTrack img{
+    @media screen and (max-width:414px){
+        width: 100%;
+             }
+             @media screen and (max-width:360px){
+                width: 90%;
+                     }
+}
+.bigBox{
+    position: relative;
+}
+.text h4 b{
+    width: 0;
+    height: 0;
+    border: 18px solid #fff;
+    border-right-color: #414042;
+    position: absolute;
+    left: -50px;
+    top: 0px;
+    z-index: 3;
+}
+.text h4 b:nth-of-type(2){
+    width: 0;
+    height: 0;
+    border: 18px solid #fff;
+    border-right-color: #414042;
+    position: absolute;
+ 
+    top: 0px;
+    z-index: 3;
+
+    border-right-color: #fff;
+    border-left-color: #414042;
+    left: auto;
+    right: 290px;
+}
+
+.foodTrack{
+    @include position(flex,flex-start,center);
+flex-direction: column;
+position: relative;
+height: 1700px;
+
+  @media screen and (max-width:414px){
+ height: 1400px;
+ width: 300px;
+  }
+  @media screen and (max-width:376px){
+   width: 250px;
+   height: 1100px;
+   } 
+}
+.search{
+    position: absolute;
+    top: 331px;
+    left: -8px;
+    @media screen and (max-width:915px){
+        width: 30%;
+    left: -62px;
+    }
+    @media screen and (max-width:414px){
+        width: 80%;
+        top: 285px;
+    left: -26px;
+             }
+     
+ }
+
+ .scan{
+    position: absolute;
+    top: 812px;
+    left: 271px;
+    @media screen and (max-width:414px){
+        width: 80%;
+        top: 653px;
+        left:109px;
+    }
+       @media screen and (max-width:360px){
+         top: 569px;
+         left:106px;
+     }
+ }
+ .snap{
+    position: absolute;
+    top: 1263px;
+    left: -57px;
+    @media screen and (max-width:414px){
+        width: 80%;
+    top: 1023px;
+    left: -28px;
+             }
+             @media screen and (max-width:360px){
+                top: 838px;
+                     }
+ }
+.text1{
+    position: absolute;
+    top: 350px;
+    left: 300px;
+    width: 250px;
+    @media screen and (max-width:915px){
+    left: 270px;
+    }
+    @media screen and (max-width:414px){
+        width: 132px;
+        top: 305px;
+        left: 204px;
+             }
+             @media screen and (max-width:360px){
+                left: 163px;
+                     }
+}
+.text2{
+    text-align: right;
+    position: absolute;
+    top: 950px;
+    left: 20px;
+    width: 250px;
+    @media screen and (max-width:414px){
+        width: 122px;
+        top: 705px;
+        left: -17px;
+             }
+             @media screen and (max-width:360px){
+                left: -28px;
+                top:600px;
+                     }
+}
+.text3{
+    text-align: left;
+    position: absolute;
+    top: 1431px;
+    left: 303px;
+    width: 250px;
+    @media screen and (max-width:414px){
+        width: 132px;
+        top: 1084px;
+        left: 210px;
+             }
+             @media screen and (max-width:360px){
+                left: 163px;
+                top:903px;
+                     }
+}
+.text2 h4 b{
+    width: 0;
+    height: 0;
+    border: 18px solid #fff;
+    border-right-color: #414042;
+    position: absolute;
+ 
+    top: 0px;
+    z-index: 3;
+
+    border-right-color: #fff;
+    border-left-color: #414042;
+    left: auto;
+    right: -50px;
+}
+.text  h4{
+    position: relative;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ed8623;
+    font-weight: bold;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+.text p{
+    color: #818386;
+    line-height: 1.6em;
+    font-size: 13px;
+    font-family: 'avenir', helvetica, arial, sans-serif;
+    font-weight: normal;
+}
+.grayBlock{
+    width: 100%;
+    height: 700px;
+    background: #e1e1e3;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/images%2Fshoes_bg.jpg?alt=media&token=dabba56d-c0cb-4064-9771-a4adfeb880c6'), url('https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/images%2Fpants_bg.jpg?alt=media&token=f80f7574-6c3e-47a0-9999-392cdec4993b');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, top right;
+    @media screen and (max-width:768px){
+ display: none;
+}
+}
+.grayBlock h2{
+    color: #818386;
+    font-size: 48px;
+    text-align: center;
+    font-family: 'raleway', sans-serif;
+    font-weight: lighter;
+    padding-top: 180px;
+    padding-bottom: 0;
+}
+.grayBlock  i{
+    font-style: normal;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    letter-spacing: 6px;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    color: #818386;
+    text-align: center;
+}
+hr{
+    width: 80px;
+    height: 12px;
+    display: block;
+    background: #ed8623;
+    border: 0;
+    margin: 0 auto 60px auto;
+}
+.grayBlock p{
+    width: 40%;
+    max-width: 500px;
+    color: #818386;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: 'raleway', sans-serif;
+    font-weight: bold;
+}

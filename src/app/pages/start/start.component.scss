@@ -1,0 +1,89 @@
+@import 'src/assets/mixins';
+.number{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: orange;
+    text-align: center;
+    font-size: 38px;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+margin-right: 20px;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+button{
+    @include button;
+    width: 300px;
+    margin: 0 0 70px 40px;
+ }
+form{
+    width: 450px;
+    color: rgb(53, 53, 53);
+    font-family:  99% arial,helvetica,sans-serif;
+    font-size: 24px;
+ }
+
+.form-control{
+    width: 330px;
+    margin-top: 10px;
+    font-family: Arial;
+}
+
+.question{
+    width: 600px;
+    min-height: 100px;
+    margin: 20px;
+}
+.fields{
+    width: 330px;
+    margin-left: 60px;
+}
+label{
+    height: 45px;
+}
+.form-check{
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.form-check-label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-group{
+    margin-top: 20px;
+}
+.form-group input{
+    width: 100px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.form-group span{
+   font-size: 20px;
+   color: gray;
+   margin-right: 30px;
+}
+.inline{
+    display: flex;
+    margin-left: 60px;
+}
+// input.ng-invalid.ng-touched{
+// border: 2px groove rgba(245, 0, 0, 0.493);
+// transition: 1s;
+// }
+// input.ng-valid.ng-touched{
+//     border: 2px groove rgba(8, 194, 8, 0.466);
+//     }
+.warn{
+    font-size: 10px;
+    color:gray;
+    font-size: 'avenir';
+    margin:10px ;
+}

@@ -1,0 +1,164 @@
+<hr>
+<div class="container">
+    <form action="" #form="ngForm">
+        <div class="question">
+            <div class="title">
+                <div class="number"><span>1</span></div>
+                <label for="">Set your email & password</label>
+            </div>
+            <div class="fields">
+                <input type="email" class="form-control" placeholder="Email" #userEmail required >
+                <input type="password" class="form-control" placeholder="Password"  #userPwd required>
+                <input type="password" class="form-control" placeholder="Confirm password"  #confirm required >
+                <div *ngIf="userPwd.value!==confirm.value" class="warn">These passwords are different</div>
+            </div>
+        </div>
+        <div class="question">
+            <div class="title">
+                <div class="number"><span>2</span></div>
+                <label for="">Tell us a bit about yourself</label>
+            </div>
+            <div class="inline">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" value="male" name="sex" (click)="gender('male')">
+                    <label class="form-check-label" >Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" value="female" name="sex" (click)="gender('female')">
+                    <label class="form-check-label">Female</label>
+                </div>
+            </div>
+            <div class="fields">
+                <div class="form-group">
+                    <p>Height</p>
+                    <input type="number" class="form-control" [(ngModel)]="user.height" name="user.height" ><span>centimeters</span>
+                </div>
+                <div class="form-group">
+                    <p>Weight</p>
+                    <input type="number" class="form-control" placeholder="Current" [(ngModel)]="user.weightStart" name="user.weightStart"><span>kg</span>
+                    <input type="number" class="form-control" placeholder="Goal" [(ngModel)]="user.weightGoal" name="user.weightGoal"><span>kg</span>
+                </div>
+            </div>
+        </div>
+        <div class="question">
+            <div class="title">
+                <div class="number"><span>3</span></div>
+                <label for="">Your physically activity</label>
+            </div>
+            <div class="fields">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="light" name="active" (click)="active(1.2)">
+                    <label class="form-check-label">Light</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="norm" name="active" (click)="active(1.5)">
+                    <label class="form-check-label">Normal</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="hard" name="active" (click)="active(1.9)">
+                    <label class="form-check-label">Hard</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="fields">
+            <button  type="button"  (click)="UserService.SignUp(userEmail.value, userPwd.value,user)" class="btn" [disabled]="userPwd.value!==confirm.value">Sign up</button>
+        </div>
+        <div class="fields">
+        <!-- Continue with Google-->
+        <!-- <div class="formGroup">
+            <button type="button" class="btn googleBtn" (click)="UserService.GoogleAuth()">
+              <i class="fab fa-google-plus-g"></i> Continue with Google</button>
+          </div> -->
+    
+          <!-- Continue with Facebook -->
+          <!-- <div class="formGroup">
+            <button type="button" class="btn facebookBtn" (click)="UserService.FacebookAuth()">
+              <i class="fab fa-facebook"></i>Continue with Facebook</button>
+          </div>  -->
+        </div>
+    </form>
+</div>
+
+
+<!-- <div class="container">
+    <form action="" #form="ngForm">
+        <div class="question">
+            <div class="title">
+                <div class="number"><span>1</span></div>
+                <label for="">Set your email & password</label>
+            </div>
+            <div class="fields">
+                <input type="text" class="form-control" placeholder="User name" [(ngModel)]="user.userName"
+                    name="user.userName" >
+                <input type="email" class="form-control" placeholder="Email" [(ngModel)]="user.email" name="user.email"
+                     required >
+                <div *ngIf="isUserAlreadySignUp" class="warn">User with this email already sign up</div>
+                <input type="password" class="form-control" placeholder="Password" [(ngModel)]="user.password"
+                    name="user.password" #pass="ngModel" required pattern="^[a-zA-Z0-9]+$">
+                <input type="password" class="form-control" placeholder="Confirm password" [(ngModel)]="confirm"
+                    name="confirm" #conf="ngModel" required >
+                <div *ngIf="pass.value!==conf.value" class="warn">These passwords are different</div>
+            </div>
+        </div>
+        <div class="question">
+            <div class="title">
+                <div class="number"><span>2</span></div>
+                <label for="">Tell us a bit about yourself</label>
+            </div>
+            <div class="inline">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" [(ngModel)]="sex" name="sex" value="male" (click)="gender('male')">
+                    <label class="form-check-label" >Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="sex" value="female" (click)="gender('female')">
+                    <label class="form-check-label">Female</label>
+                </div>
+            </div>
+            <div class="fields">
+                <div class="form-group">
+                    <p>Height</p>
+                    <input type="number" class="form-control" [(ngModel)]="user.height"
+                    name="user.height" #height="ngModel" required><span>centimeters</span>
+                </div>
+                <div class="form-group">
+                    <p>Weight</p>
+                    <input type="number" class="form-control" placeholder="Current" [(ngModel)]="user.weightStart"
+                        name="user.weightStart" #weightStart="ngModel" ><span>kg</span>
+                    <input type="number" class="form-control" placeholder="Goal" [(ngModel)]="user.weightGoal"
+                        name="user.weightGoal" #weightGoal="ngModel"><span>kg</span>
+                </div>
+            </div>
+        </div>
+        <div class="question">
+            <div class="title">
+                <div class="number"><span>3</span></div>
+                <label for="">Your physically activity</label>
+            </div>
+            <div class="fields">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="activity" value="1.2" (click)="active(1.2)" >
+                    <label class="form-check-label">Light</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="activity" value="1.5" (click)="active(1.5)">
+                    <label class="form-check-label">Normal</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="activity" value="1.9" (click)="active(1.9)">
+                    <label class="form-check-label">Hard</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="fields">
+            <button  type="button"  (click)="addUser()" class="btn" >Sign up</button>
+        </div>
+
+    </form>
+</div> -->
+
+
+
+<!-- pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" -->

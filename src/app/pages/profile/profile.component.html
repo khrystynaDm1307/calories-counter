@@ -1,0 +1,185 @@
+
+<!--  -->
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" (click)="pages('profile')" [ngClass]="{'active': profile}">Profile</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" (click)="pages('calendar')" [ngClass]="{'active': calendar}">Calendar</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" (click)="pages('results')" [ngClass]="{'active': results}">Results</a>
+    </li>
+</ul>
+<div class="image">
+    <!-- profile -->
+    <div class="profileCard grid-box" *ngIf="profile">
+        <div class="fBlock">
+            <div class="userPhoto">
+                <img [src]="user.photoURL" alt="">
+            </div>
+            <div class="userInfa">
+                <p class="userName">{{user.email}}</p>
+                <div class="kg">
+                    <div>
+                        <h5>Start</h5>
+                        <p>{{user.weightStart}} <span>kg</span></p>
+                    </div>
+                    <div>
+                        <h5>Current</h5>
+                        <p> {{user.weightGoal}}<span>kg</span></p>
+                    </div>
+                    <div>
+                        <h5>Goal</h5>
+                        <p>{{user.weightGoal}} <span>kg</span></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="card-body">
+              <h5 class="card-title">Select a file for upload:</h5>
+              <input type="file" (change)="upload($event)" accept=".png,.jpg" />
+              <br><br>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
+                  [style.width]="(uploadProgress | async) + '%'" [attr.aria-valuenow]="(uploadProgress | async)"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <br>
+              <div *ngIf="downloadURL | async; let downloadSrc" class="alert alert-info" role="alert">
+                File uploaded: <a [href]="downloadSrc">{{downloadSrc}}</a>
+              </div>
+              <br>
+              <div class="btn-group" role="group" *ngIf="uploadState | async; let state">
+                <button type="button" class="btn btn-warning" (click)="task.pause()"
+                  [disabled]="state === 'paused'">Pause</button>
+                <button type="button" class="btn btn-warning" (click)="task.cancel()"
+                  [disabled]="!(state === 'paused' || state === 'running')">Cancel</button>
+                <button type="button" class="btn btn-warning" (click)="task.resume()"
+                  [disabled]="state === 'running'">Resume</button>
+              </div>
+            </div>
+          </div>
+
+        <div class="userCalorie">
+            <h5>Daily norm</h5>
+            <p>{{kk}} kk</p>
+        </div>
+    </div>
+
+    <!-- calendar -->
+    <div class="calendarCard grid-box" *ngIf="calendar">
+        <button type="button" (click)="addDay()" class="btn add button">Add a new day +</button>
+        <div class="boxDay">
+            <div class="day" *ngFor="let day of user.days;let i=index">
+                <h5>Day {{day.id}}</h5>
+                <div class="meals">
+                    <div>
+                        <span>Breakfast</span>
+                        <button type="button" class="btn btn-primary  button " data-toggle="modal"
+                            data-target="#exampleModal" (click)="whichMeal('b',i)">+</button>
+                        <div class="list">
+                            <p *ngFor="let item of user.days[i].breakfast">{{item.product.name}}<span> {{item.weight}}
+                                    g</span></p>
+                        </div>
+                    </div>
+                    <div>
+                        <span>Lunch</span>
+                        <button type="button" class="btn btn-primary  button" data-toggle="modal"
+                            data-target="#exampleModal" (click)="whichMeal('l',i)">+</button>
+                        <div class="list">
+                            <p *ngFor="let item of user.days[i].lunch">{{item.product.name}}<span> {{item.weight}}
+                                    g</span></p>
+                        </div>
+                    </div>
+                    <div>
+                        <span>Dinner</span>
+                        <button type="button" class="btn btn-primary  button" data-toggle="modal"
+                            data-target="#exampleModal" (click)="whichMeal('d',i)">+</button>
+                        <div class="list">
+                            <p *ngFor="let item of user.days[i].dinner">{{item.product.name}}<span> {{item.weight}}
+                                    g</span></p>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <h4>{{user.days[i].counter}} kk</h4>
+                    <button type="button" class="btn btn-danger btn-danger2" (click)="deleteDay(i)">Delete</button>
+                </footer>
+
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add product</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <select class="form-control select" [(ngModel)]="product" name="product">
+                                <option value="" disabled >Choose product</option>
+                                <option *ngFor="let item of productsArray;let i=index">{{item.name}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <p>Weight:</p>
+                            <input type="number" class="form-control weight" [(ngModel)]="weightProduct"
+                                name="weightProduct" placeholder="0"><span>g</span>
+                        </div>
+                        <button type="button" class="btn btn-success" (click)="addProduct()">Add</button>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Product</th>
+                                    <th scope="col">Weight</th>
+                                    <th scope="col">Edit</th>
+                                    <th scope="col">Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let element of arrayToAdd;let i=index">
+                                    <th>{{i+1}}</th>
+                                    <td>{{element.product.name}}, {{element.product.calories}} kK/100g</td>
+                                    <td>{{element.weight}} g</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary" (click)="edit(i)"
+                                            *ngIf="editDel">Edit</button>
+                                        <button type="button" class="btn btn-success" (click)="saveEdit(i)"
+                                            *ngIf="!editDel">Save</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger"
+                                            (click)="deleteProduct(i)">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary  button" (click)="save()"
+                            data-dismiss="modal">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- results -->
+    <div class="card2 grid-box" *ngIf="results">
+       
+                <canvas baseChart
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [chartType]="barChartType">
+        </canvas>
+        
+    </div>
+</div>

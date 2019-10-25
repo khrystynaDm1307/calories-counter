@@ -1,0 +1,374 @@
+@import 'src/assets/mixins';
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.button{
+    @include button;
+    width: 330px;
+    margin: 20px 0 20px 0;
+ }
+form{
+    width: 340px;
+    color: rgb(109, 109, 109);
+    font-family:  99% arial,helvetica,sans-serif;
+    font-size: 24px;
+ }
+
+.form-control{
+    width: 330px;
+    margin-top: 10px;
+    font-family: Arial;
+}
+.form-check{
+    display: flex;
+    font-size: 20px;
+
+}
+a{
+    font-size: 15px;
+    color: #d71;
+}
+.links{
+    text-align: right;
+}
+.actions{
+    display: flex;
+justify-content: space-around;
+}
+.image{
+    width: 100%;
+    height: 900px;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/images%2Fdiet.jpg?alt=media&token=247f68a7-da1c-4ad5-96a8-7d38ab83a66c');
+    display: flex;
+    flex-direction: column;
+padding-top: 50px;
+align-items: center;
+background-position: center;
+background-size:  cover;
+z-index: 1;
+}
+.gray{
+    width: 100%;
+    height: 900px;
+//   background-color: rgba(121, 121, 121, 0.425);
+z-index: 2;
+
+}
+.grid-box{
+    background-color: rgba(70, 70, 70, 0.603);
+    box-shadow: 0 18px 20px 0 rgba(0,0,0,0.2), 0 16px 20px 0 rgba(0,0,0,0.19);
+}
+.profileCard{
+    width: 500px;
+    min-height: 300px;
+    padding: 30px;
+}
+.userPhoto{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgb(250, 235, 215);
+    box-shadow: 0 18px 20px 0 rgba(0,0,0,0.2), 0 16px 20px 0 rgba(0,0,0,0.19);
+}
+.userPhoto img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.userInfa{
+    width: 250px;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.userName{
+    color: #fafafa;
+    line-height: 1.6em;
+    font-size: 30px;
+    font-family: 'avenir', helvetica, arial, sans-serif;
+    font-weight: bold;
+}
+.kg{
+    width: 250px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 10px;
+}
+
+.fBlock{
+    display: flex;
+    height: 150px;
+    align-items: center;
+    justify-content: space-between;
+}
+.kg h5{
+    color: #fdfdfd;
+    text-align: center;
+     font-size: 15px;
+font-family: monospace;
+font-style: italic;
+margin-bottom: 10px;
+}
+.kg p{
+    color: #fdfdfd;
+    text-align: center;
+     font-size: 25px;
+font-weight: bold;
+}
+.kg p span{
+    color: #fdfdfd;
+     font-size: 20px;
+}
+.userCalorie{
+    background-color: rgba(231, 216, 182, 0.952);
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 18px 20px 0 rgba(0,0,0,0.2), 0 16px 20px 0 rgba(0,0,0,0.19);
+    color: rgb(46, 46, 46);
+}
+.userCalorie h5{
+    text-align: center;
+     font-size:20px;
+font-family: monospace;
+font-style: italic;
+margin-bottom: 10px;
+
+}
+.userCalorie p{
+    line-height: 1.4em;
+    font-size: 70px;
+    font-family: 'avenir', helvetica, arial, sans-serif;
+    font-weight: bold;
+    @media screen and (max-width:380px){
+        font-size: 50px;
+           }
+}
+.progress{
+    @media screen and (max-width:380px){
+       width: 280px;
+           }
+           @media screen and (max-width:320px){
+            width: 220px;
+                }
+}
+.add{
+    width: 95%;
+}
+.logout{
+    width: 150px;
+    height: 50px;
+}
+.nav{
+    margin-bottom:50px;
+}
+.nav-item a{
+    color: #d71;
+}
+.nav-item a:hover{
+    color: rgb(61, 61, 61);
+}
+.active{
+    color: rgb(71, 71, 71);
+}
+
+ .day{
+     width: 95%;
+     height: 360px;
+     background-color: black;
+  margin: 20px;
+  background-color: rgb(221, 184, 105);
+  box-shadow: 0 18px 20px 0 rgba(0,0,0,0.2), 0 16px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-width:840px){
+    height: 1400px;
+    margin: 10px;
+       }
+ }
+ .meals{
+     display: flex;
+     width:100%;
+    height: 250px;
+     justify-content: space-around;
+     padding: 10px 0 10px 0;
+     @media screen and (max-width:840px){
+        flex-direction: column;
+        align-items: center;   
+        height: 700px;      
+    }
+ }
+ .meals div{
+     width: 100%;
+     height: 140px;
+     text-align: center;
+     @media screen and (max-width:840px){
+        margin: 10px 0 80px 0;
+           }
+ }
+
+ .day h5{
+    font-size: 30px;
+    font-family: 'avenir', helvetica, arial, sans-serif;
+    font-weight: bolder;
+    color: rgb(65, 0, 0);
+    text-align: center;
+    margin-bottom: 10px;
+ }
+ .day h4{
+    font-size: 35px;
+    font-family: 'avenir', helvetica, arial, sans-serif;
+    font-weight: bolder;
+    color: rgb(66, 2, 2);
+    text-align: right;
+    padding-right: 20px;
+    margin-bottom: 10px;
+ }
+ .day span{
+    font-style: italic;
+    margin: 10px;
+    font-weight: bold;
+ }
+ .boxDay{
+     display: flex;
+     flex-direction: column;
+     overflow-y: scroll;
+     width: 95%;
+     @media screen and (max-width:320px){
+       width: 100%;
+                        }
+ }
+
+ .calendarCard{
+    width: 95%;
+    min-height: 100%;
+    padding: 30px;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.list{
+    height: 100px;
+    width: 300px;
+    background-color: rgb(219, 191, 130);
+    border: 1px dotted rgb(179, 138, 5);
+    padding: 10px 0 10px 0;
+}
+.list p{
+    font-size: 15px;
+    color: rgb(54, 54, 54);
+    font-weight: normal;
+    font-style: normal;
+}
+.btn-primary{
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    padding: 0;
+    border: #d71;
+    margin-left: 10px;
+}
+.row{
+    display:flex;
+}
+.modal-footer button{
+    width: 100px;
+    height: 50px;
+    border: rgb(82, 82, 82);
+}
+.weight{
+    width: 70px;
+    display: inline-block;
+    margin: 10px 10px 10px 0;
+}
+footer{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    @media screen and (max-width:840px){
+ flex-direction: column;
+           }
+}
+.btn-danger2{
+    color: white;
+    font-family: 'raleway';
+    font-size: 20px;
+}
+table{
+    margin-top: 20px;
+}
+tbody button{
+    width: 50px;
+    height: 30px;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+.card2{
+    width: 80%;
+    height: 500px;
+    background-color: #fdfdfd;
+}
+
+.nav{
+    @media screen and (max-width:380px){
+      justify-content: center;
+      margin-top: 20px;
+        }
+}
+.profileCard{
+    @media screen and (max-width:420px){
+     width: 100%;
+          }
+
+}
+.calendarCard{
+    @media screen and (max-width:330px){
+        padding: 5px;
+                    }
+}
+.fBlock{
+    @media screen and (max-width:420px){
+       flex-direction: column;
+       justify-content: space-between;
+       height: 300px;
+             }
+}
+.userInfa{
+    @media screen and (max-width:420px){
+    align-items: center;
+              }
+}
+.userCalorie{
+    @media screen and (max-width:420px){
+  margin: 0;
+                  }
+}
+.image{
+    @media screen and (max-width:420px){
+padding: 0px;
+height: 700px;
+   }
+}
+.btn-primary{
+    @media screen and (max-width:840px){
+background-color: black;
+   }
+}
+.select{
+    width: 90%;
+}

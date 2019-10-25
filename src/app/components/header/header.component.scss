@@ -1,0 +1,165 @@
+@import 'src/assets/mixins';
+
+header{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.hamburger-menu{
+    display: none;
+    @media screen and (max-width:563px){
+        display: block;
+       }
+}
+.header{
+@include position(flex,space-around,center);
+width: 900px;
+height: 150px;
+@media screen and (max-width:900px){
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+    align-items: center;
+}
+@media screen and (max-width:768px){
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+    align-items: center;
+}
+@media screen and (max-width:563px){
+    flex-direction: column;
+    justify-content: space-around;
+    height: 150px;
+    align-items: center;
+}
+
+}
+ul{
+    display: flex;
+    @media screen and (max-width:563px){
+     display: none;
+    }
+}
+
+a{
+    margin-right: 20px;
+    font-family: 'avenir', helvetica, arial, sans-serif;;
+cursor: pointer;
+    font-size: 18px;
+    color: #666;
+}
+a:hover{
+    color: #d71;
+    cursor: pointer;
+}
+.button{
+   @include button;
+   cursor: pointer;
+}
+.acc{
+    color: #d71;
+}
+.myAcc a{
+    display: inline-block
+    
+    }
+
+    /* скрываем чекбокс */
+#menu__toggle {
+    opacity: 0;
+  }
+  /* стилизуем кнопку */
+  .menu__btn {
+    display: flex; /* используем flex для центрирования содержимого */
+    align-items: center;  /* центрируем содержимое кнопки */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  /* добавляем "гамбургер" */
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #030244;
+    z-index: 4;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  /* контейнер меню */
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    @media screen and (max-width:420px){
+    padding: 50px;
+         }
+  }
+  .menu__item{
+    margin-right: 206px;
+  }
+  /* элементы меню */
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
+  }
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+    z-index: 4;
+  }
+
+  .menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+}
+.menu__box {
+  transition-duration: .25s;
+}
+.menu__item {
+  transition-duration: .25s;
+}

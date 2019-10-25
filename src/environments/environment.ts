@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: 'AIzaSyB9gNRRv7GS0qFVPJaSHQh8jq2PSnxqu8Y',
+    authDomain: 'calorie-counter-a6d4b.firebaseapp.com',
+    databaseURL: 'https://calorie-counter-a6d4b.firebaseio.com',
+    projectId: 'calorie-counter-a6d4b',
+    storageBucket: 'calorie-counter-a6d4b.appspot.com',
+    messagingSenderId: '1077961618203',
+    appId: '1:1077961618203:web:922571526bb852c57399be'
+  }
 };
 
 /*

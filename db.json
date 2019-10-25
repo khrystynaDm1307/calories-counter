@@ -1,0 +1,219 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "categories": [
+    {
+      "id": 1,
+      "name": "Daily Cup of Joe",
+      "aboutName": "Company Updates:",
+      "description": "What our team is brewing up",
+      "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2Fsap2pyri4c?alt=media&token=03fb9dd3-6049-4ed1-baac-d255a8d61b6f"
+    },
+    {
+      "id": 2,
+      "name": "Running on Full",
+      "aboutName": "Health, Wellness, Exercise & Real Member Stories:",
+      "description": "A perfect mix for motivation",
+      "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2Fmzzlfyprge?alt=media&token=b7cbd4c1-55db-4473-8082-6ce7c91529c9"
+    },
+    {
+      "id": 3,
+      "name": "Geeking Out",
+      "aboutName": "Tech & Science Topics:",
+      "description": "How we’re heating up innovation",
+      "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2F8wfkf8jemsj?alt=media&token=f34d1b03-dadd-42c8-b539-cf73d05f2e98"
+    },
+    {
+      "id": 4,
+      "name": "Food",
+      "aboutName": "Nutritious Recipes & Meal Ideas:",
+      "description": "Mouth-watering inspiration for the kitchen",
+      "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2F4t5rq8rkpgt?alt=media&token=1f2263c9-0b95-4e6f-9185-f89b626f70f5"
+    }
+  ],
+  "post": [
+    {
+      "id": 1,
+      "category": {
+        "id": 1,
+        "name": "Daily Cup of Joe",
+        "aboutName": "Company Updates:",
+        "description": "What our team is brewing up",
+        "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2Fsap2pyri4c?alt=media&token=03fb9dd3-6049-4ed1-baac-d255a8d61b6f"
+      },
+      "title": "6 Essential Tips for Meal Prep",
+      "text": "One of the biggest barriers to eating healthier and losing weight can be taking the time to cook meals at home.While it can seem intimidating at first, meal prep is one of the best ways to stay on track with your eating goals. Whether you’re new to meal prepping or looking for ways to improve your process, here are 6 essential tips for setting yourself up for success. ",
+      "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2F1ml4a5eh8uk?alt=media&token=244f9f6c-c8cf-4dee-9f19-900897c40039",
+      "coments": []
+    },
+    {
+      "id": 2,
+      "category": {
+        "id": 1,
+        "name": "Daily Cup of Joe",
+        "aboutName": "Company Updates:",
+        "description": "What our team is brewing up",
+        "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2Fsap2pyri4c?alt=media&token=03fb9dd3-6049-4ed1-baac-d255a8d61b6f"
+      },
+      "title": "The Health Benefits of Turmeric",
+      "text": "When it comes to improving your diet, fruits and vegetables are a good place to start, but you’ll also want to stop by the spice aisle. There, you’ll find turmeric, an ancient root and medicinal herb that is said to do wonders for your health.\n\nTurmeric is sometimes called the “golden spice” for its rich, yellow color. It’s usually ground into a spice so you can use it in recipes. You can also find the fresh root in specialty stores so that you can grind it yourself. Turmeric is even available in supplement form and can probably be purchased at your local pharmacy.\n\nHere’s how you can use turmeric and how it can benefit your health.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2Fjki58b1mecn?alt=media&token=8b903953-7736-456d-ab28-69f9827972a5",
+      "coments": []
+    },
+    {
+      "id": 3,
+      "category": {
+        "id": 1,
+        "name": "Daily Cup of Joe",
+        "aboutName": "Company Updates:",
+        "description": "What our team is brewing up",
+        "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2Fsap2pyri4c?alt=media&token=03fb9dd3-6049-4ed1-baac-d255a8d61b6f"
+      },
+      "title": "10 Easy Ways to Be a More Sustainable Eater",
+      "text": "It’s easy to get caught up in trying to eat healthier. We often forget that our food choices impact more than just our body. Legally defined, sustainable agriculture is, “an integrated system of plant and animal production practices” that involve conserving resources with reduced impact on the environment so that future generations can continue to have access to a nourishing food source. According to the Academy of Nutrition and Dietetics, the role then of sustainable eating is to make food choices that are not only healthful for our bodies, but for the environment as well. So how do we do this? The EAT-Lancet Commission is a group of more than 30 world-leading scientists that get together to review the current literature and provide science-based recommendations for following a healthy, sustainable diet. ",
+      "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2Fy4t6eqmh8wg?alt=media&token=8c66c540-c88c-4576-b653-143d38211c1e",
+      "coments": []
+    },
+    {
+      "id": 5,
+      "category": {
+        "id": 2,
+        "name": "Running on Full",
+        "aboutName": "Health, Wellness, Exercise & Real Member Stories:",
+        "description": "A perfect mix for motivation",
+        "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2Fmzzlfyprge?alt=media&token=b7cbd4c1-55db-4473-8082-6ce7c91529c9"
+      },
+      "title": "Everything You Need to Know to Get Your Pumpkin Fix this Fall",
+      "text": "What may be surprising is how low in calories pumpkin is. This is due to the fact that pumpkins are approximately 94% water. One cup of cooked pumpkin provides: - 49 calories - <0.5 grams fat - 2 grams protein - 12 grams carbs - 3 grams fiber - 245% of the recommended daily allowance (RDA) for Vitamin A - 19% of the RDA for vitamin C - 16% of the RDA for potassium - 10-11% of the RDA for copper, manganese, vitamin B12, and vitamin E - Clearly, pumpkin is an excellent source of vitamin A, which has been shown to help strengthen your immune system and preserving eye health. In addition to vitamins and minerals, pumpkins are also a good source of numerous antioxidants.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2Fhouy5opzh37?alt=media&token=b4ece549-7428-48be-bfae-399b7c62b33a",
+      "coments": []
+    },
+    {
+      "id": 6,
+      "category": {
+        "id": 2,
+        "name": "Running on Full",
+        "aboutName": "Health, Wellness, Exercise & Real Member Stories:",
+        "description": "A perfect mix for motivation",
+        "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2Fmzzlfyprge?alt=media&token=b7cbd4c1-55db-4473-8082-6ce7c91529c9"
+      },
+      "title": "More Than Flavor: 7 Spices With Full Body Benefits",
+      "text": "If you’re working out, eating balanced meals, and drinking plenty of water, you might want to consider adding some new spices to your diet to kick things up a notch. Not only are spices a great, low-calorie way to flavor your meals, but they also can help feed many different parts of your body. From increasing metabolism to reducing inflammation, here are 7 spices you might want to add to your diet.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2F7yuwkcnn8m?alt=media&token=74409f25-0d6d-48a9-8b50-f87397ed87b0",
+      "coments": []
+    },
+    {
+      "id": 7,
+      "category": {
+        "id": 2,
+        "name": "Running on Full",
+        "aboutName": "Health, Wellness, Exercise & Real Member Stories:",
+        "description": "A perfect mix for motivation",
+        "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2Fmzzlfyprge?alt=media&token=b7cbd4c1-55db-4473-8082-6ce7c91529c9"
+      },
+      "title": "Smart Swaps: Healthier Ways to Enjoy Fall-Flavored Coffee Drinks",
+      "text": "From Pumpkin Spiced Lattes to Salted Caramel Mochas, the beginning of fall means the start of specialty holiday beverages at many of our favorite coffee shops. While it can seem fun and festive to order one of these festive refreshments, you may not be aware that one drink contains more calories than a meal and more sugar than two or three glazed donuts",
+      "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2Fgq6j9kxdnvp?alt=media&token=fd532f6c-c3a4-464a-870e-a7feb6d3aeb1",
+      "coments": []
+    },
+    {
+      "id": 8,
+      "category": {
+        "id": 3,
+        "name": "Geeking Out",
+        "aboutName": "Tech & Science Topics:",
+        "description": "How we’re heating up innovation",
+        "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2F8wfkf8jemsj?alt=media&token=f34d1b03-dadd-42c8-b539-cf73d05f2e98"
+      },
+      "title": "The Power of Protein at Breakfast",
+      "text": "From eggs and toast to a bowl of cereal, many of us have different ideas of what an “ideal” breakfast looks like. \n\nAnd while some breakfasts are easier or more convenient than others, when it comes to starting your day off on the right foot, there’s one nutrient in particular that’s important to include: protein. \n\nResponsible for a variety of functions including building and repairing muscles, regulating digestion and metabolism, and supporting a healthy immune system, protein is an essential nutrient that many of us don’t get enough of in the morning. \n\nIn this article we’ll take a look at the benefits of increasing your protein intake at breakfast and healthy sources of protein to start adding to your morning routine",
+      "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2Fqu5beix9uum?alt=media&token=680ff0ec-e48c-4241-b6d0-f7c4f6776669",
+      "coments": []
+    },
+    {
+      "id": 9,
+      "category": {
+        "id": 3,
+        "name": "Geeking Out",
+        "aboutName": "Tech & Science Topics:",
+        "description": "How we’re heating up innovation",
+        "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2F8wfkf8jemsj?alt=media&token=f34d1b03-dadd-42c8-b539-cf73d05f2e98"
+      },
+      "title": "Improving Your Health with Nutrigenomics",
+      "text": "We’ve all established that a diet rich in a variety of nutritious foods can improve your health and reduce your risk for disease. If it’s so common, why doesn’t everyone reap the same results from a healthy diet? And are certain diets better for some than others?\n\nResearch has demonstrated it: Different genetic makeup, different outcomes from diet choices.\n\nNutrigenomics researchers are working to identify the genes that interact with diet and impact your risk of developing certain health problems. They are finding that “bad genes” can often be at least partially offset by a good diet. This is because environmental factors alter how your genes are expressed, and diet is an environmental factor that all of us are exposed to multiple times a day, every day.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2Ftkqyll7ojrg?alt=media&token=45207f3f-dd7a-4173-ae59-fa3f5f7de107",
+      "coments": []
+    },
+    {
+      "id": 10,
+      "category": {
+        "id": 3,
+        "name": "Geeking Out",
+        "aboutName": "Tech & Science Topics:",
+        "description": "How we’re heating up innovation",
+        "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2F8wfkf8jemsj?alt=media&token=f34d1b03-dadd-42c8-b539-cf73d05f2e98"
+      },
+      "title": "Coffee: How It Affects Your Weight Loss",
+      "text": "Giving humans energy since the 15th century (and likely even earlier), coffee continues to be one of the most widely consumed beverages around the world. Whether it’s grabbing a cup on your way to work, or settling in with a warm mug in bed on the weekend, many of us start our days with a cup of java.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2Firo4e9cewkg?alt=media&token=687b5936-c099-4738-91fb-9db73f1cfbf6",
+      "coments": []
+    },
+    {
+      "id": 11,
+      "category": {
+        "id": 4,
+        "name": "Food",
+        "aboutName": "Nutritious Recipes & Meal Ideas:",
+        "description": "Mouth-watering inspiration for the kitchen",
+        "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2F4t5rq8rkpgt?alt=media&token=1f2263c9-0b95-4e6f-9185-f89b626f70f5"
+      },
+      "title": "Overnight Chia Pudding (2 Ways!)",
+      "text": "Chia pudding is the overnight creation you need to try. Why? It has minimal ingredients, endless flavor options, great health benefits, and takes less than a minute to prepare! Below is a basic chia pudding recipe as well as a chocolate version. Hurry into your kitchen to whip up your own unique flavors.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2Fftf7kf1byym?alt=media&token=c6b7bfeb-adea-40f6-9479-8021eb6f097d",
+      "coments": []
+    },
+    {
+      "id": 12,
+      "category": {
+        "id": 4,
+        "name": "Food",
+        "aboutName": "Nutritious Recipes & Meal Ideas:",
+        "description": "Mouth-watering inspiration for the kitchen",
+        "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2F4t5rq8rkpgt?alt=media&token=1f2263c9-0b95-4e6f-9185-f89b626f70f5"
+      },
+      "title": "Chocolate Quinoa Breakfast Bowl",
+      "text": "You’ve had oatmeal. You’ve had farina (AKA Cream of Wheat). But have you ever tried breakfast quinoa? Quinoa has less calories than oatmeal, a third of the carbohydrates, it’s a complete protein, and using quinoa flakes means pot to bowl in just three minutes.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2Fjriusqb86ar?alt=media&token=b925ad5a-9f72-4523-84e2-49a467368e1a",
+      "coments": []
+    },
+    {
+      "id": 13,
+      "category": {
+        "id": 4,
+        "name": "Food",
+        "aboutName": "Nutritious Recipes & Meal Ideas:",
+        "description": "Mouth-watering inspiration for the kitchen",
+        "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2F4t5rq8rkpgt?alt=media&token=1f2263c9-0b95-4e6f-9185-f89b626f70f5"
+      },
+      "title": "Chef Creations: Grilled Zucchini Salad with Sea Salt and Lemon Zest",
+      "text": "Build a medium direct fire in the grill. Spread an even layer of unlit charcoal in the bottom of the grill. Fill a chimney halfway with charcoal. Stuff two sheets of newspaper in the bottom of the chimney and light it. When the coals are fully engaged—you should see flames peeking over the top—pour them over the unlit charcoal. If using gas grill, light the gas and adjust the temperature on both sides to medium.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/postImages%2F1g062o5m3e2?alt=media&token=690c784e-b0db-4557-986b-56705c9b48b1",
+      "coments": []
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+<div class="intro">
+    <header>
+        <h2>Welcome to</h2>
+        <h1>The Secret Ingredient</h1>
+        <h5>Powered by Lose It!</h5>
+    </header>
+    <div class="img"></div>
+</div>
+<p class="text">Here at Lose It!, we know the key to a healthy lifestyle is balance. In this blog, we’re dishing out our
+    Company
+    Updates, Health & Wellness, and Tech & Science articles to give you a healthy dose of all things Lose It! – Cheers,
+    and enjoy.</p>
+<div class="categories" >
+    <div class="box" *ngFor="let cat of categories">
+        <div class="title">
+            <h4>{{cat.aboutName}}</h4>
+            <div class="block"></div>
+            <p>{{cat.description}}</p>
+        </div>
+        <a [routerLink]="[ '/blog', cat.id ]" class="imgLink" >
+        <img [src]="cat.image" alt="" class="card-img-top"></a>
+        <a [routerLink]="[ '/blog', cat.id ]">
+            <h2>{{cat.name}}</h2>
+        </a>
+    </div>

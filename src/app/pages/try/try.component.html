@@ -1,0 +1,54 @@
+<div class="image">
+    <h2>Your Body Mass Index</h2>
+    <div class="cal" *ngIf="status">
+        <div class="grid">
+            <p class="bmi">BMI gives you an idea of whether you’re 'underweight', a 'healthy' weight, 'overweight', or
+                'obese' for your height.</p>
+        </div>
+        <div class="grid">
+            <div class="icons">
+                <div class="icon male"></div>
+                <div class="icon female"></div>
+            </div>
+            <form action="">
+                <div class="inline">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sex" value="male" checked>
+                        <label class="form-check-label">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sex" value="female">
+                        <label class="form-check-label">Female</label>
+                    </div>
+                </div>
+                <div class="inputs">
+                    <div class="form-group">
+                        <p>Height</p>
+                        <div>
+                            <input type="number" class="form-control" [(ngModel)]="height" name="height"><span>meters</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p>Weight</p>
+                        <div>
+                            <input type="number" class="form-control" placeholder="Current" [(ngModel)]="weight" name="weight"><span>kg</span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <button type="button" class="btn" (click)="calculate()" *ngIf="status">Calculate!</button>
+    <div class="result" *ngIf="!status">
+        <h1>{{bmi}}</h1>
+        <div class="bmi-img"></div>
+    </div>
+</div>
+<div class="advice" *ngIf="!status">
+    <div class="box"><span>it's time to use Lose it!</span></div>
+    <img src="https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/images%2Fsunrise_icon.png?alt=media&token=eb7ea86c-903f-40d5-98f6-7b2cddff7e37" alt="">
+    <div class="btns">
+        <a class="btn button" routerLink="/start">Sign Up</a>
+        <a class="btn button" routerLink="/login">Sign In</a>
+    </div>
+</div>

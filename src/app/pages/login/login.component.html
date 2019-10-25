@@ -1,0 +1,17 @@
+<hr>
+<div class="container">
+    <form action="" #form="ngForm">
+        <input type="text" class="form-control" placeholder="User name" #userName required>
+        <input type="password" class="form-control" placeholder="Password" #userPassword required>
+        <div *ngIf="isUserSignUp" class="warn">Username or password are wrong</div>
+        <div>
+            <button type="button" class="btn button" [disabled]="form.invalid" (click)="UserService.SignIn(userName.value, userPassword.value)">Sign In</button>
+            <div class="actions">
+                <div class="links">
+                    <p> <a>Forgot your password?</a></p>
+                    <p> <a routerLink="/start">Create account now</a></p>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

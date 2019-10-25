@@ -1,0 +1,58 @@
+@import 'src/assets/mixins';
+
+footer{
+    height: 200px;
+    background-color: #ed8623;
+    padding:30px;
+    @include position(flex,space-around,center);
+    flex-wrap: wrap;
+}
+
+i{
+    display: block;
+    height: 36px;
+    width: 36px;
+    border: 2px solid #fff;
+    color: #fff;
+border-radius: 50%;
+    float: left;
+    margin-right: 18px;
+    text-align: center;
+    line-height: 36px;
+    font-size: 18px;
+  
+}
+
+i:hover{
+   border-color: rgb(121, 121, 121);
+
+}
+p{
+    font-size: 15px;
+    color: #fff;
+    font-family: 'avenir', helvetica, arial, sans-serif;
+margin: 20px;
+}
+.privacy a{
+    font-size: 15px;
+    color: #fff;
+    font-family: 'avenir', helvetica, arial, sans-serif;
+}
+.privacy{
+    width: 400px;
+   text-align: center;
+}
+.social a i{
+    background-image: url('https://img.freepik.com/free-vector/social-media-logotype-collection_1083-70.jpg?size=338&ext=jpg');
+   
+}
+.fa{
+    background-position: -71px -110px;
+}
+.tw{
+    background-position: -17px -110px;
+}
+
+.inst{
+    background-position: -124px -110px;
+}

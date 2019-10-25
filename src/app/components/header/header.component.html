@@ -1,0 +1,45 @@
+<header>
+    <div class="header">
+        <img src="https://firebasestorage.googleapis.com/v0/b/calorie-counter-a6d4b.appspot.com/o/images%2Flogo.png?alt=media&token=c945791a-cd06-403a-8ed6-07a25d3a4a0d"
+            alt="">
+        <nav>
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" (click)="open()"/>
+                <label class="menu__btn" for="menu__toggle" >
+                    <span></span>
+                </label>
+                <ul class="menu__box" *ngIf="opened">
+                    <li><a class="menu__item" (click)="close()"  routerLink="home"> Home</a></li>
+                    <li><a class="menu__item" (click)="close()" routerLink="try">Try it!</a></li>
+                    <li><a class="menu__item" (click)="close()" routerLink="start">Start</a></li>
+                    <li><a class="menu__item" (click)="close()" routerLink="blog">Blog</a></li>
+                    <li><a class="menu__item"  (click)="close()" routerLink="about">About</a></li>
+                </ul>
+            </div>
+            <ul>
+                <li>
+                    <a routerLink="home"> Home</a>
+                </li>
+                <li>
+                    <a routerLink="try">Try it!</a>
+                </li>
+                <li>
+                    <a routerLink="start">Start</a>
+                </li>
+                <li>
+                    <a routerLink="blog"> Blog</a>
+                </li>
+                <li>
+                    <a routerLink="about">About</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="aBtn">
+            <a href="" class="btn button" routerLink="login" *ngIf="!UserService.isLoggedIn()">Sign In</a>
+            <a routerLink="profile" *ngIf="UserService.isLoggedIn()" class="acc">My account</a>
+            <a class="btn button logout" (click)="UserService.SignOut()" routerLink="home"
+                *ngIf="UserService.isLoggedIn()">Log out</a></div>
+
+    </div>
+</header>

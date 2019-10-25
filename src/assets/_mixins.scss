@@ -1,0 +1,20 @@
+@mixin border {
+    border: 1px solid black;
+}
+@mixin position($display,$justify,$align) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align
+}
+@mixin button {
+    color: white;
+    font-family: 'raleway';
+    font-size: 20px;
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(top, #f0aa27, #d71);
+    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
+    &:hover{
+        background-image: -webkit-linear-gradient(top, #e0740e, rgb(221, 157, 39));
+        color: white;
+    }
+}
